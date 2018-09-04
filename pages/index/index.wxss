@@ -1,0 +1,200 @@
+.top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 80rpx;
+    background-color: #fff;
+    border-bottom: solid 1px #efefef;
+}
+
+.top-item {
+    line-height: 80rpx;
+    flex: 1;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 30rpx;
+    color: #666;
+    padding: 0 20rpx;
+}
+
+.top-item text {
+    display: inline-block;
+    line-height: 80rpx;
+    flex: 1;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 30rpx;
+    color: #666;
+    padding: 0 20rpx;
+}
+
+.on {
+    border-bottom: solid 2px #db363e;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 690rpx;
+    margin: auto;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-item {
+    padding: 40rpx 0;
+    border-bottom: solid 1px #efefef;
+}
+.wrapper{
+	    width: 690rpx;
+    height: 400rpx;
+	position: relative;
+}
+.video-video {
+    width: 690rpx;
+    height: 400rpx;
+}
+.video-video2 {
+    width: 690rpx;
+    height: 400rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.videoPlay{
+	position: absolute;
+    width: 60rpx;
+    height: 60rpx;
+    top: 50%;
+    left: 50%;
+    margin: -30rpx 0 0 -30rpx;
+	z-index: 100;
+}
+
+.video-name {
+    margin-top: 10rpx;
+    font-family: PingFangSC-Medium;
+    font-size: 34rpx;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.video-desc {
+    font-family: PingFangSC-Regular;
+    font-size: 26rpx;
+    color: #666;
+    margin-top: 10rpx;
+    /* display: -webkit-box; */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.video-bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.video-btn {
+    margin-top: 20rpx;
+    width: 103rpx;
+    height: 39rpx;
+    border: solid 1px #d2d2d2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-btn image {
+    width: 19rpx;
+    height: 12rpx;
+    margin-right: 10rpx;
+}
+
+.video-btn text {
+    font-family: PingFangSC-Regular;
+    font-size: 22rpx;
+    color: #999;
+}
+
+.audio {
+    display: flex;
+    flex-direction: column;
+}
+
+.audio-item {
+    padding: 40rpx 0;
+    border-bottom: solid 1px #efefef;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audio-left {
+    width: 204rpx;
+    height: 152rpx;
+    position: relative;
+    margin-right: 20rpx;
+}
+
+.audio-audio {
+    width: 204rpx;
+    height: 152rpx;
+}
+
+.audio-status {
+    position: absolute;
+    width: 60rpx;
+    height: 60rpx;
+    top: 50%;
+    left: 50%;
+    margin: -30rpx 0 0 -30rpx;
+}
+
+.audio-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.audio-name {
+    font-family: PingFangSC-Medium;
+    font-size: 34rpx;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.audio-desc {
+    margin-top: 10rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 26rpx;
+    color: #666;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.audio-right {
+	width: 30rpx;
+    margin-left: 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.audio-right image {
+    width: 25rpx;
+    height: 29rpx;
+}

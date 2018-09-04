@@ -1,0 +1,50 @@
+<view class="services_container">
+    <view class='top'>
+        <block wx:for="{{['视频','音频']}}">
+            <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                <text class="{{currentTabsIndex==index?'on':''}}">{{item}}</text>
+            </view>
+        </block>
+    </view>
+    <view class='box'>
+        <view class='video' hidden="{{currentTabsIndex!=0}}">
+            <block wx:for="{{videoList}}">
+                <view class='video-item'>
+					<view class='wrapper'>
+						<video class='video-video' wx:if='{{index==videoIndex}}' id='video{{index}}' autoplay='{{true}}' show-center-play-btn="{{false}}" src='{{item.resource_add}}'></video>
+						<image class='video-video2' wx:if='{{index!=videoIndex}}' mode='aspectFill' src='{{item.coverimg}}'></image>
+						<image class='videoPlay' wx:if='{{index!=videoIndex}}' data-index='{{index}}' bindtap='videoPlay' src='/images/play.png'></image>
+					</view>
+                    <view class='video-name'>{{item.title}}</view>
+                    <view class='video-desc' style="{{item.upStatus?'':'display:-webkit-box'}}">{{item.description}}</view>
+                    <view class='video-bottom'>
+                        <view class='video-btn' data-index="{{index}}" bindtap='upDown'>
+                            <image hidden='{{item.upStatus}}' src='/images/slide.png'></image>
+                            <image hidden='{{!item.upStatus}}' src='/images/up.png'></image>
+                            <text>{{!item.upStatus?'展开':'收起'}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class='audio' hidden="{{currentTabsIndex!=1}}">
+            <block wx:for="{{audioList}}">
+                <view class='audio-item'>
+                    <view class='audio-left'>
+                        <image class='audio-audio' src='{{item.coverimg}}'></image>
+                        <image class='audio-status' hidden='{{musicIndex==index}}' data-index='{{index}}' bindtap='musicPlay' data-src="{{item.resource_add}}" src='/images/play.png'></image>
+                        <image class='audio-status' hidden='{{musicIndex!=index}}' data-index='{{index}}' bindtap='musicPause' data-src="{{item.resource_add}}" src='/images/pause.png'></image>
+                    </view>
+                    <view class='audio-content'>
+                        <view class='audio-name'>{{item.title}}</view>
+                        <view class='audio-desc'>{{item.description}}</view>
+                    </view>
+                    <view class='audio-right'>
+                        <image hidden='{{musicIndex!=index}}' src='/images/playing.gif'></image>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <audio src='{{audioSrc}}' loop='{{true}}' style='display:none'></audio>
+</view>
